@@ -78,6 +78,7 @@ API_WEATHER = Config.API_OPENWEATHER
 TELETHON_HASH = Config.TELETHON_HASH
 TELETHON_ID = Config.TELETHON_ID
 SPAMWATCH = Config.SPAMWATCH_API
+REDIS_URL = Config.REDIS_URI
 
 SUDO_USERS.add(OWNER_ID)
 
@@ -88,7 +89,6 @@ if SPAMWATCH == None:
 else:
     spamwtc = spamwatch.Client(SPAMWATCH)
 
-REDIS_URL = Config.REDIS_URI
 REDIS = StrictRedis.from_url(REDIS_URL,decode_responses=True)
 
 try:
